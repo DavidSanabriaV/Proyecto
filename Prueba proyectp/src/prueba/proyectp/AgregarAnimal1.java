@@ -49,6 +49,7 @@ public class AgregarAnimal1 extends javax.swing.JFrame {
         InputFrecuencia = new javax.swing.JTextField();
         GuardarAni = new javax.swing.JButton();
         MenuAni = new javax.swing.JButton();
+        AtrasAA1 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -130,11 +131,23 @@ public class AgregarAnimal1 extends javax.swing.JFrame {
         });
 
         GuardarAni.setText("Guardar");
+        GuardarAni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuardarAniActionPerformed(evt);
+            }
+        });
 
         MenuAni.setText("Menu");
         MenuAni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuAniActionPerformed(evt);
+            }
+        });
+
+        AtrasAA1.setText("Atras");
+        AtrasAA1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AtrasAA1ActionPerformed(evt);
             }
         });
 
@@ -153,10 +166,9 @@ public class AgregarAnimal1 extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Especie)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(FrecuenciaAnimal)
-                                    .addComponent(HorarioAnimal)
-                                    .addComponent(IDEAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(FrecuenciaAnimal)
+                                .addComponent(HorarioAnimal)
+                                .addComponent(IDEAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(InputNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 743, Short.MAX_VALUE)
                                 .addComponent(NombreAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(EdadAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -174,14 +186,15 @@ public class AgregarAnimal1 extends javax.swing.JFrame {
                             .addComponent(InputEspecie, javax.swing.GroupLayout.Alignment.LEADING))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(GuardarAni))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(418, 418, 418)
-                        .addComponent(MenuAni)))
+                .addGap(418, 418, 418)
+                .addComponent(MenuAni)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(GuardarAni)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(AtrasAA1)
+                .addGap(58, 58, 58))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,7 +234,9 @@ public class AgregarAnimal1 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(InputFrecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(GuardarAni)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(GuardarAni)
+                    .addComponent(AtrasAA1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(MenuAni)
                 .addContainerGap())
@@ -249,7 +264,7 @@ public class AgregarAnimal1 extends javax.swing.JFrame {
     }//GEN-LAST:event_InputNombreActionPerformed
 
     private void MenuAniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuAniActionPerformed
-        AgregarAnimalobby menu1 = new AgregarAnimalobby();
+        RegistroDeAnimales menu1 = new RegistroDeAnimales();
         menu1.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_MenuAniActionPerformed
@@ -282,6 +297,16 @@ public class AgregarAnimal1 extends javax.swing.JFrame {
         String FrecuenciaAni = InputEspecie.getText();
     }//GEN-LAST:event_InputFrecuenciaActionPerformed
 
+    private void GuardarAniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarAniActionPerformed
+       
+    }//GEN-LAST:event_GuardarAniActionPerformed
+
+    private void AtrasAA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AtrasAA1ActionPerformed
+        RegistroDeAnimales atrasAA1 = new RegistroDeAnimales();
+        atrasAA1.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_AtrasAA1ActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -320,6 +345,7 @@ public class AgregarAnimal1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AlimentoAnimal;
+    private javax.swing.JButton AtrasAA1;
     private javax.swing.JLabel EdadAnimal;
     private javax.swing.JLabel Especie;
     private javax.swing.JLabel FrecuenciaAnimal;

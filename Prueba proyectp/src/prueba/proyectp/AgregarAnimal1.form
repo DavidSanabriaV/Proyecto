@@ -70,11 +70,9 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="Especie" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="FrecuenciaAnimal" min="-2" max="-2" attributes="0"/>
-                                      <Component id="HorarioAnimal" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="IDEAnimal" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="FrecuenciaAnimal" min="-2" max="-2" attributes="0"/>
+                                  <Component id="HorarioAnimal" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="IDEAnimal" alignment="0" max="32767" attributes="0"/>
                                   <Component id="InputNombre" alignment="0" pref="743" max="32767" attributes="0"/>
                                   <Component id="NombreAnimal" alignment="0" max="32767" attributes="0"/>
                                   <Component id="EdadAnimal" max="32767" attributes="0"/>
@@ -99,17 +97,16 @@
                   </Group>
               </Group>
               <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                          <Component id="GuardarAni" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="418" max="-2" attributes="0"/>
-                          <Component id="MenuAni" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <EmptySpace min="-2" pref="418" max="-2" attributes="0"/>
+                  <Component id="MenuAni" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                  <Component id="GuardarAni" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="AtrasAA1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -151,7 +148,10 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="InputFrecuencia" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="GuardarAni" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="GuardarAni" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="AtrasAA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace pref="25" max="32767" attributes="0"/>
                   <Component id="MenuAni" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -249,6 +249,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GuardarAniActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="MenuAni">
           <Properties>
@@ -256,6 +259,14 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuAniActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="AtrasAA1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Atras"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AtrasAA1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
